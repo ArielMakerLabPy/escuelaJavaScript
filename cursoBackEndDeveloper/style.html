@@ -23,10 +23,9 @@
         margin: 0 0 10px 0;
     }
     .caja2 {
-        background-color: #3CEE04;
-        width: 30px;
-        height: 30px;
-
+        background-color: #08AEEA;
+        background-image: linear-gradient(135deg, #08AEEA 0%, #2AF598 50%, #c7ae11 100%);
+        color: grey;
     }
 </style>
 <body>
@@ -35,6 +34,40 @@
     <p>Vaca</p>
     <p>Perro</p> -->
     <div class="caja1"></div>
-    <div class="caja2"></div>
+    <div class="caja2">
+        <ul>
+            <li>width: define el ancho de un elemento</li>
+            <li>height: define el alto de un elemento</li>
+            <li>background: define el color o la url de fondo de un elemento</li>
+            <li>background-color: define el color de fondo de un elemento</li>
+            <li>color: define el color de fondo de un elemento; los colores se pueden por nombres, sist. hexadecimal o por RGB</li>
+            <li>border: define el tamaño, estilo y color del borde de un elemento</li>
+            <li>border-radius: define que tan redondeado quiero mi elemento</li>
+            <li>margin: define el margen de un elemento. margin-right, margin-left, margin-top,
+                margin-bottom para especificar si solo quiero un lado; también colocando en orden,
+                de acuerdo a las manecillas del reloj, comenzando desde top (arriba) separados por
+                un espacio
+            </li>
+            <li>padding: define la distancia del borde de un elemento hasta su contenido. Si quiero
+                especificar un padding un solo lado o solo algunos también se utiliza el método 
+                del <strong>margin</strong>
+            </li>
+            <li>font-size: define el tamaño de la fuente</li>
+            <li>font-family: define la familia de tipografía de la fuente</li>
+            <li>opacity: determina la transparencia del elemento, tiene valores entre 0 y 1</li>
+            <li>outline: es el esquema de los elementos. ESQUEMA es una línea que se dibuja alrededor
+                de los elementos que hace que se destaquen, generalmente de color azul <b>
+                    si no queremos esa linea escribimos outline: none; tambien se puede modificar, ej.:
+                    outline-style: solid;
+                    outline-color: red;
+                    outline-width: 5px;
+            </li>
+            <li>box-sizing: cuando queremos que un padding no afecte al tamaño total del elemento</li>
+            <li>transition: para cambiar los valores de las transiciones. Una transición NO es una
+                animación. Una TRANSICION va de un punto A a un punto B sin interrupciones o saltos en medio
+            </li>
+            <li>animation: permite que animemos nuestros elementos</li>
+        </ul>
+    </div>
 </body>
 </html>
