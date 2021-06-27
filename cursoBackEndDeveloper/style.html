@@ -35,6 +35,7 @@
     <p>Perro</p> -->
     <div class="caja1"></div>
     <div class="caja2">
+        <h2>Funciones de las propiedades de CSS más utilizadas</h2>
         <ul>
             <li>width: define el ancho de un elemento</li>
             <li>height: define el alto de un elemento</li>
@@ -67,6 +68,43 @@
                 animación. Una TRANSICION va de un punto A a un punto B sin interrupciones o saltos en medio
             </li>
             <li>animation: permite que animemos nuestros elementos</li>
+        </ul>
+        <h2>Display en CSS</h2>
+            <ul>
+                <li>Block: Flujo de bloque de escritura es de arriba hacia abajo</li>
+                <li>Inline: Todos los elementos de este display se visualiza de uno al lado de otro 
+                    de izquierda a derecha
+                </li>
+                <li>Inline-block: este es similar al Inline solo que respeta el width y el height 
+                    que se le asigna a los elementos
+                </li>
+                <li>None: este display se utiliza para ocultar elementos sin eliminarlos por completo del DOM</li>
+                <li>Table: los elementos con este display se comportan como los elementos table</li>
+                <li>Flex: por defecto alineará los elementos hijos de izquierda a derecha, suele ir 
+                    acompañado por otras propiedades como justify-content y align-items
+                </li>
+                <li>Grid: al igual que flexbox, para implementarlo debemos hacer uso de display: grid 
+                    en el elemento contenedor o elemento padre
+                </li>
+            </ul>
+        <h2>Posicionamiento en CSS</h2>
+        <ul>
+            <li>Position: relative; el elemento se coloca en relación a su posición normal</li>
+            <li>Position: absolute; Se ubican en relación al elemento relativo más cercano. Aquí podemos 
+                hacer uso de propiedades top, bottom, left y right
+            </li>
+            <li>Position: fixed; Se ubica en relación con la ventana del navegador y también se ve afectado 
+                por las propiedades top, bottom, left y right
+            </li>
+            <li>Position: sticky; el elemento se posiciona en función de la posición de desplazamiento 
+                del usuario. Si lo ubicas a la izquierda, siempre va a estar ahí sin importar cuántas veces se haga
+                scroll en la página, por ejemplo
+            </li>
+            <li>Position: static; los elementos en HTML son estáticos por defecto, siguen el flujo normal de 
+                la página y no se ven afectados por las propiedades top, bottom, left y right
+            </li>
+            <li>Position: initial; Ubica el elemento en la posición que tiene de forma predeterminada</li>
+            <li>Position: inherital; hereda esta propiedad de su elemento padre</li>
         </ul>
     </div>
 </body>
