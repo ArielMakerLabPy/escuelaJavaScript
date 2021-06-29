@@ -7,11 +7,13 @@
     <title>Header</title>
 </head>
 <style>
+    .globalwidth {
+        width: 100 %;
+    }
     body {
         margin: 0;
     }
     header {
-        width: 100%;
         height: 80px;        
         background-color: #FF3CAC;
         background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
@@ -21,10 +23,15 @@
         margin-top: 10px;
         margin-left: 10px;
     }
+    .footer {
+        
+    }
 </style>
 <body>
-    <header>
+    <header class="header globalwidth">
+        Header 
         <img src="https://raw.githubusercontent.com/platzi/PlatziVideo/feature/react/src/assets/static/logo-platzi-video-BW2.png" alt="">
     </header>
+    <footer class="footer globalwidth">Footer</footer>
 </body>
 </html>
