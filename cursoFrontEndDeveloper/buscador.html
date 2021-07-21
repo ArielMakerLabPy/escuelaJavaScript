@@ -70,14 +70,14 @@
         margin: 0px;
         color: white;
     }
-    main {
+    .main {
         height: 300px;
-
     }
     .main__title {
         color: white;
         font-size: 25px;
-
+        /*Centrar en la página*/
+        text-align: center;
     }
     .input {
         background-color: rgba(255,255,255,0.1);
@@ -93,6 +93,11 @@
     }
     ::placeholder {
         color: white;
+    }
+    section.main.input {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 </style>
 <body>
