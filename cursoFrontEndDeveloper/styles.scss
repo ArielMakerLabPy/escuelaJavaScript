@@ -1,3 +1,5 @@
+$blanco: $blanco;
+
 body {
   margin: 0;
   font-family: 'Muli', sans-serif;
@@ -7,7 +9,7 @@ body {
 .header {
   align-items: center;
   background: #8f57fd;
-  color: white;
+  color: $blanco;
   display: flex;
   height: 100px;
   justify-content: space-between;
@@ -43,7 +45,7 @@ body {
 }
 
 .header__menu li a {
-  color: white;
+  color: $blanco;
   text-decoration: none;
 }
 
@@ -72,12 +74,12 @@ body {
 }
 
 .main__title {
-  color: white;
+  color: $blanco;
   font-size: 25px;
 }
 
 .categories__title {
-  color: white;
+  color: $blanco;
   font-size: 16px;
   position: absolute;
   padding-left: 30px;
@@ -96,7 +98,7 @@ body {
   transition: 450ms transform;
   transition: 450ms transform, 450ms -webkit-transform;
   font-size: 0;
-  white-space: nowrap;
+  $blanco-space: nowrap;
   margin: 70px 0px;
   padding-bottom: 10px;
 }
@@ -164,12 +166,12 @@ body {
 }
 
 .carousel-item__details--title {
-  color: white;
+  color: $blanco;
   margin: 5px 0px 0px 0px;
 }
 
 .carousel-item__details--subtitle {
-  color: white;
+  color: $blanco;
   font-size: 8px;
   margin: 3px 0px;
 }
@@ -183,7 +185,7 @@ body {
 }
 
 .footer a {
-  color: white;
+  color: $blanco;
   cursor: pointer;
   font-size: 14px;
   padding-left: 30px;
@@ -196,9 +198,9 @@ body {
 
 .input {
   background-color: rgba(255,255,255,0.1);
-  border: 2px solid white;
+  border: 2px solid $blanco;
   border-radius: 25px;
-  color: white;
+  color: $blanco;
   font-family: 'Muli', sans-serif;
   font-size: 16px;
   height: 50px;
@@ -209,7 +211,7 @@ body {
 }
 
 ::placeholder {
-  color: white;
+  color: $blanco;
 }
 
 @media only screen and (max-width: 600px) {
