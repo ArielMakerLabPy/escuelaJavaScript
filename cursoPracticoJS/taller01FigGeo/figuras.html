@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,9 +8,31 @@
     <script src="./figuras.js"></script>
     <title>Figuras Geométicas | Curso Práctico de JS</title>
 </head>
+
 <body>
-    <h1>
-        Figuras Geométicas
-    </h1>
+    <header>
+        <h1>
+            Figuras Geométicas
+        </h1>
+        <p>Este es el primer taller del curso práctico de JS</p>
+
+    </header>
+    <section>
+        <h2>Calcula el área y perímetro de un cuadrado</h2>
+        <form action="">
+            <label for="inputCuadrado">
+                Escribe cuanto mide el lado del cuadrado:
+            </label>
+            <input id="inputCuadrado" type="number"/>
+            <button type="button" onclick="calcularPerimetroCuadrado()">
+                Calcular el perímetro
+            </button>
+            <button type="button" onclick="calcularAreaCuadrado()">
+                Calcular el área
+            </button>
+        </form>
+    </section>
+
 </body>
+
 </html>
