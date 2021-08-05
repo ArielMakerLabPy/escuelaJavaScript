@@ -30,7 +30,11 @@ console.log('Los lados del triángulo miden: ' +
     'cm y la altura mide ' + alturaTriangulo + ' cm'
 );
  */
-
+//Vamos a calcular la altura del triángulo isóceles con pitágoras
+function alturaTriangulo(lado, base){
+    const altura = Math.sqrt(lado * lado - ((base * base) / 4));
+    return altura;
+}
 
 // const perimetroTriangulo = (ladoTriangulo1 + ladoTriangulo2 + baseTriangulo);
 // console.log('El perimetro del triángulo es: ' + perimetroTriangulo + ' cm');
@@ -78,7 +82,7 @@ function areaCirculo(radio){
 
 console.groupEnd();
 
-//Agregamos conector con input de HTML
+//Agregamos conector con input de HTML para el cuadrado
 function calcularPerimetroCuadrado(){
     const input = document.getElementById('inputCuadrado');
     const value = input.value;
@@ -95,3 +99,11 @@ function calcularAreaCuadrado(){
     alert(area);
 }
 
+//Agregamos conector con input de HTML para el triangulo
+function calcularAlturaTriangulo(){
+    const input = document.getElementById('inputTriangulo');
+    const value = input.value;
+
+    const altura = alturaTriangulo(value);
+    alert(altura);
+}
