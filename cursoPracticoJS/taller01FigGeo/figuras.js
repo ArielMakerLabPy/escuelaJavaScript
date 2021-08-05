@@ -111,9 +111,13 @@ function calcularAlturaTriangulo(){
 }
 
 function calcularAreaTriangulo(){
+    const inputLado = document.getElementById('inputLadoTriangulo');
+    const valueLado = inputLado.value;
     const inputBase = document.getElementById('inputBaseTriangulo');
     const valueBase = inputBase.value;
 
-    const area = areaTriangulo(calcularAlturaTriangulo(), valueBase);
+    const altura = alturaTriangulo(valueLado, valueBase);
+
+    const area = areaTriangulo(altura, valueBase);
     alert(area);
 }
