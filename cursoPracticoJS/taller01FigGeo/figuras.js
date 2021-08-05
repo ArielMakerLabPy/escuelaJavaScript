@@ -101,9 +101,19 @@ function calcularAreaCuadrado(){
 
 //Agregamos conector con input de HTML para el triangulo
 function calcularAlturaTriangulo(){
-    const input = document.getElementById('inputTriangulo');
-    const value = input.value;
+    const inputLado = document.getElementById('inputLadoTriangulo');
+    const valueLado = inputLado.value;
+    const inputBase = document.getElementById('inputBaseTriangulo');
+    const valueBase = inputBase.value;
 
-    const altura = alturaTriangulo(value);
+    const altura = alturaTriangulo(valueLado, valueBase);
     alert(altura);
+}
+
+function calcularAreaTriangulo(){
+    const inputBase = document.getElementById('inputBaseTriangulo');
+    const valueBase = inputBase.value;
+
+    const area = areaTriangulo(calcularAlturaTriangulo(), valueBase);
+    alert(area);
 }
