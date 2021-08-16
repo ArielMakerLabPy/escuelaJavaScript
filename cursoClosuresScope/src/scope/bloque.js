@@ -10,21 +10,21 @@ const fruta = () => {
     
 };
 
-fruta();
+// fruta();
 
-var x = 1;
-{
-    var x = 2;
-    console.log(x);
-}
-console.log(x);
+// var x = 1;
+// {
+//     var x = 2;
+//     console.log(x);
+// }
+// console.log(x);
 
-const otra = () => {
-    for (let i = 0; i < 10; i++) {
-        setTimeout(() => {
-            console.log(i);
-        }, 1000);
-    }
-};
+// const otra = () => {
+//     for (let i = 0; i < 10; i++) {
+//         setTimeout(() => {
+//             console.log(i);
+//         }, 1000);
+//     }
+// };
 
-otra();
+// otra();
