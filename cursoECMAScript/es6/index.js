@@ -52,9 +52,9 @@ console.log(education);
   var globalVar = 'Global Var';
 
 }
-{
-  let globalLet = 'Global Let';
-}
+// {
+//   let globalLet = 'Global Let';
+// }
 
 console.log(globalVar);
 //console.log(globalLet);
@@ -62,3 +62,39 @@ console.log(globalVar);
 const a = 'b';
 //a = 'a';
 console.log(a);
+
+let nombre = 'Ariel';
+let edad = 34;
+
+obj = {nombre: nombre, edad: edad};
+
+obj2 = {nombre, edad};
+console.log(obj2);
+
+const names = [
+  {nombre: 'Ariel', edad: 34},
+  {nombre: 'Julian', edad: 35},
+]
+
+let listOfNombres = names.map(function(item) {
+  console.log(item.nombre);
+});
+
+let listOfNombres2 = names.map(item => console.log(item.nombre));
+
+const square = num => num * num;
+
+const helloPromise = () => {
+  return new Promise((resolve, reject) => {
+    if (true) {
+      resolve('Hello Promise');
+    } else {
+      reject('Error');
+    }
+  });
+}
+
+helloPromise()
+  .then(response => console.log(response))
+  .catch(error => console.log(error));
+
