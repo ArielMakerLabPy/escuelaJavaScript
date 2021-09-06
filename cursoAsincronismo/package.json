@@ -4,7 +4,7 @@
   "description": "trabajar con asincronismo en JS",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "callback": "node /home/ariel/github/escuelaJavaScript/cursoAsincronismo/src/callback/index.js",
   },
   "keywords": [
     "callbacks",
