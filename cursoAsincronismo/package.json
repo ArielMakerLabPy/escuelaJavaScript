@@ -1,16 +1,14 @@
 {
-  "name": "cursoasincronismo",
+  "name": "asincronismo",
   "version": "1.0.0",
-  "description": "trabajar con asincronismo en JS",
-  "main": "src/index.js",
+  "description": "sobre asincronismo",
+  "main": "index.js",
   "scripts": {
-    "callback": "node /home/ariel/github/escuelaJavaScript/cursoAsincronismo/src/callback/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [
-    "callbacks",
-    "promise",
-    "async"
-  ],
-  "author": "",
-  "license": "MIT"
+  "author": "Ariel",
+  "license": "MIT",
+  "dependencies": {
+    "xmlhttprequest": "^1.8.0"
+  }
 }
