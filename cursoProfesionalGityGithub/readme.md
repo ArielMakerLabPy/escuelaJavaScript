@@ -19,3 +19,5 @@ Github puede considerarse como la red social de código para los programadores y
 ##### Staging Area y git Directory
 Al ejecutar el comando 'git init' (comando para iniciar un repositorio git) ocurren dos cosas:
 - Se crea una carpeta .git el cual es el repositorio local donde git almacena los metadatos y la base de datos de objetos para el proyecto. Es la parte más importante de git, y es lo que se copia cuando clonas un repositorio desde otro ordenador.
+- Se crea un archivo sencillo que define el staging area, generalmente está contenido en el directorio de git, que almacena información acerca de lo que va a ir en tu próxima confirmación.
+##### Ciclo básico de trabajo en git
