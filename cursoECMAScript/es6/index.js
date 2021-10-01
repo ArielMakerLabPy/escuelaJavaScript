@@ -92,7 +92,7 @@ const helloPromise = () => {
       reject('Error');
     }
   });
-}
+};
 
 helloPromise()
   .then(response => console.log(response))
