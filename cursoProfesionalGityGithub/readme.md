@@ -21,3 +21,10 @@ Al ejecutar el comando 'git init' (comando para iniciar un repositorio git) ocur
 - Se crea una carpeta .git el cual es el repositorio local donde git almacena los metadatos y la base de datos de objetos para el proyecto. Es la parte más importante de git, y es lo que se copia cuando clonas un repositorio desde otro ordenador.
 - Se crea un archivo sencillo que define el staging area, generalmente está contenido en el directorio de git, que almacena información acerca de lo que va a ir en tu próxima confirmación.
 ##### Ciclo básico de trabajo en git
+- Se modifica una serie de archivos en el directorio de trabajo.
+- Se preparan los archivos añadiéndolos al área de preparación o staging area (git add).
+- Se confirman los cambios: las instantáneas de los archivos que están en el área de stanging area se almacenan de forma permanente en el directorio de git (git commit).
+##### Estado de un archivo
+**Commited**: si una versión concreta de un archivo está en el directorio de git, se considera confirmada.
+**Staged**: si ha sufrido cambios desde que se obtuvo del repositorio, pero ha sido añadida al área de preparación, está preparada.
+**Modified**: y si ha sufrido cambios desde que se obtuvo del repositorio, pero no se ha preparado, está modificada.
