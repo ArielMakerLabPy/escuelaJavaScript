@@ -57,3 +57,7 @@ Se debe tener en cuenta al combinar los conflictos que puedan generarse. Git sie
 - *git log --all --graph --decorate --oneline*: muestra de manera comprimida toda la historia del repositorio de manera gráfica y embellecida.
 - *git show filename*: permite ver la historia de los cambios de una archivo.
 - *git diff < commit1 > < commit2 >*: compara diferencias entre los cambios confirmados.
+##### Volver en el tiempo con branches y checkout
+- *git reset < commit > --soft/hard*: regresa al commit especificado, eliminando todos los cambios que se hicieron después de ese commit.
+- *git checkout < commit/branch > <filename>*: permite regresar al estado en el cual se realizó un commit o branch especificado, pero no elimina loque está en staging area.
+- *git checkout --< filePath >*: desahcer cambios en un archivo estado modificado (que ni fue agregado a staging)
