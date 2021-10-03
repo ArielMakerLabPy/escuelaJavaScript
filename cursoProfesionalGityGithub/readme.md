@@ -61,3 +61,20 @@ Se debe tener en cuenta al combinar los conflictos que puedan generarse. Git sie
 - *git reset < commit > --soft/hard*: regresa al commit especificado, eliminando todos los cambios que se hicieron después de ese commit.
 - *git checkout < commit/branch > <filename>*: permite regresar al estado en el cual se realizó un commit o branch especificado, pero no elimina loque está en staging area.
 - *git checkout --< filePath >*: desahcer cambios en un archivo estado modificado (que ni fue agregado a staging)
+##### Git rm y git reset
+###### git rm
+Este comando nos ayuda a eliminar archivos de git sin eliminar su historial del sistema de versiones. Esto quiere decir que si necesitamos recuperar el archivo solo debemos "viajar en el tiempo" y recuperar el último commit antes de borrar el archivo en cuestión.
+*git rm* no puede usarse así nomás. Se debe usar uno de los flags para indicar a git cómo eliminar los archivos que ya no se necesitan en la última versión del proyecto:
+- *git rm --cached < archivo/s >*: eliminar los archivos del área de staging y del próximo commit pero los mantiene en nuestro disco duro.
+- *git rm --force < archivo/s >*: elimina los archivos de git y del disco duro. Git siempre guarda todo por lo que podemos acceder al registro de la existencia de los archivos de modo que podremso recuperarlos si es necesario (pero debemos usar comandos más avanzados).
+###### git reset
+**Con git reset volvemos al pasado sin la posibilidad de volver al futuro**. Borramos la historia y la debemos sobreescribir.
+- *git reset --soft*: vuelve el branch al estado del commit especificado manteniendo los archivos en el directorio de trabajo y lo que haya en staging.
+- *git reset --hard*: borra absolutamente todo. Toda la información de los commits y del área de staging so borra del historial.
+![git reset](./utils/gitreset.png)
+- *git reset HEAD*: no borra los archivos ni sus modificaciones, solo los saca del área de staging, de forma que los últimos cambios de estos archivos no se envíen al último commit. Si se cambia de opinion se los puede incluir nuevamente con *git add*.
+##### Ramas o Branches
+Al crear una nueva rama se copia el último commit en esta nueva rama. Todos los cambios hechos en esta rama no se reflejarán en la rama master hasta que hagamos un merge.
+- *git branch < new branch >*: crea una nueva rama.
+- *git checkout < branch name >*: se mueve a la rama especificada.
+- *git branch*: lista las ramas creadas.
