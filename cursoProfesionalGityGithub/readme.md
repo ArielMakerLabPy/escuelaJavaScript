@@ -135,3 +135,19 @@ Al crear una nueva rama se copia el último commit en esta nueva rama. Todos los
 - *git checkout < branch name >*: se mueve a la rama especificada.
 
 - *git branch*: lista las ramas creadas.
+
+##### ¿Como resolver conflictos en gi?
+
+Al trabajar en dos o más ramas sobre las mismas líneas de código, ocurririan conflictos a la hora de hacer merge. Git automáticamente nos especificará en nuestro código dónde se encuentran los conflictos.
+Para resolver este problema debemos especificar la rama de donde queremos obtener el cambio, quedarnos con esas modificaciones y realizar un *commit* para completar el *merge*.
+
+##### Trabajar con un repositorio remoto
+
+- *git remote add origin <link>*: enlaza el repositorio local con el repositorio remoto.
+- *git push origin <branchName>*: exporta los archivos confirmados en el repositorio local al repositorio remoto (siempre hay que realizar todos los *commit*'s necesarios).
+- *git pull origin <branchName>*: importa los archivos del repositorio remoto al repositorio local y al working directory.
+- *git fetch*: importa los archivos remotos al repositorio local pero no al working directory.
+- *git merge*: una vez hecho el git fetch, hace falta hcer un git merge para que los archivos importados aparezcan en el working directory.
+
+### GitHub - Repositorios remotos
+
