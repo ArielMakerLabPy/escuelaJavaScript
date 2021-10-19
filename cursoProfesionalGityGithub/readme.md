@@ -143,9 +143,9 @@ Para resolver este problema debemos especificar la rama de donde queremos obtene
 
 ##### Trabajar con un repositorio remoto
 
-- *git remote add origin <link>*: enlaza el repositorio local con el repositorio remoto.
-- *git push origin <branchName>*: exporta los archivos confirmados en el repositorio local al repositorio remoto (siempre hay que realizar todos los *commit*'s necesarios).
-- *git pull origin <branchName>*: importa los archivos del repositorio remoto al repositorio local y al working directory.
+- *git remote add origin < link >*: enlaza el repositorio local con el repositorio remoto.
+- *git push origin < branchName >*: exporta los archivos confirmados en el repositorio local al repositorio remoto (siempre hay que realizar todos los *commit*'s necesarios).
+- *git pull origin < branchName >*: importa los archivos del repositorio remoto al repositorio local y al working directory.
 - *git fetch*: importa los archivos remotos al repositorio local pero no al working directory.
 - *git merge*: una vez hecho el git fetch, hace falta hcer un git merge para que los archivos importados aparezcan en el working directory.
 
@@ -156,26 +156,88 @@ Por seguridad y practicidad, para trabajar con repositorios remotos lo ideal es 
 #### Llaves SSH
 
 1. Generar las llaves SSH. Si bien no es obligatorio, se recomienda proteger la llave privada con una contraseña cuando lo solicita el proceso de generación.
-~~~ 
+
+~~~ bash
+
 ssh-keygen -t rsa -b 4094 -C <tu@email.com>
+
 ~~~
+
 **-t rsa** es el algoritmo elegido de cifrado (acrónimo de Rivest-Shamir-Adleman creadores del algoritmo).
 **-b 4096** son los bits que tendrá la llave. 2048 suele ser suficiente pero con 4096 se extrema la seguridad.
-**-C <Comentario de elección>**
+**-C < Comentario de elección >**
 2. Terminar de configurar según sistema operativo.
     a. En windows y linux:
     - Encender el 'servidor' de llaves SSH local: *eval $(ssh-agent -s)*
-    - Añadir la llave privada SSH a este 'servidor': *ssh-add <ruta-a-la-llave-privada>*
+    - Añadir la llave privada SSH a este 'servidor': *ssh-add < ruta-a-la-llave-privada >*
     b. En mac:
     - Encender el 'Servidor' de llaves SSH local: *eval "$(ssh-agent -s)"*
     - Para versiones de OSX superior a Mac Sierra (v10.12) se debe crear o modificar un archivo 'config' en la carpeta de usuario con el siguiente contenido (respetar las mayúsculas):
-    **Host *
+
+~~~ bash
+    Host *
     	AddKeysToAgent yes
     	UseKeychain yes
     	IdentityFile
-      ruta-a-la-llave-privada**
-    - Añadir la llave privada SSH al 'servidor' de llaves SSH local (en cado de error se puede ejecutar este mismo comando pero sin el argumento -K):
-    *ssh-add -K <ruta-a-la-llave-privada>*
+      ruta-a-la-llave-privada
+~~~
+
+- Añadir la llave privada SSH al 'servidor' de llaves SSH local (en cado de error se puede ejecutar este mismo comando pero sin el argumento -K):
+    *ssh-add -K < ruta-a-la-llave-privada >*
 
 #### Conexión a GitHub con SSH
+
+Luego de crear las llaves SSH se debe entregar la llave pública a GitHub para realizar la comunicación de forma segura y sin necesidad de escribir el usuario y contraseña.
+Para esto entrar a la Configuración de Llaves SSH en GitHub, crear una nueva llave con el nombre deseado y el contenido de la llave pública de tu computadora.
+Luego actualizar en nuestra PC la URL del repositorio remoto, cambiando la URL con HTTPS por URL con SSH:
+
+~~~ bash
+git remote set-url origin < url-ssh-del-repositorio-en-github >
+~~~
+
+#### Tags y versiones en Git y GitHub
+
+Los tags o etiquetas permiten asignar versiones a los commits con cambios más importantes o significativos del proyecto.
+En GitHub esto crea releases, versiones descargables del proyecto en ese preciso estado.
+
+**Comandos para trabajar con etiquetas:**
+
+- Crear un nuevo tag y asignarlo a un commit:
+
+~~~ bash
+git tag -a < nombre-del-tag > -m < mensaje del commit > < id-del-commit-al-que-asignar-la-etiqueta >
+~~~
+
+- Borrar un tag en el repositorio local:
+
+~~~ bash
+git tag -d nombre-del-tag
+~~~
+
+- Listar los tags de nuestro repositorio local:
+
+~~~ bash
+git tag
+~~~
+
+- Listar los tags indicando a qué commit se asignó cada uno:
+
+~~~ bash
+gir show-ref --tags
+~~~
+
+- Publicar un tag en el repositorio remoto:
+
+~~~ bash
+git push origin --tags
+~~~
+
+- Borrar un tag del repositorio remoto:
+
+~~~ bash
+git tag -d nombre-del-tag
+git push origin :refs/tags/nombre-del-tag
+~~~
+
+#### Manejo de ramas en GitHub
 
