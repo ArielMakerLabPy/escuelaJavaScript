@@ -151,3 +151,31 @@ Para resolver este problema debemos especificar la rama de donde queremos obtene
 
 ### GitHub - Repositorios remotos
 
+Por seguridad y practicidad, para trabajar con repositorios remotos lo ideal es no enviar las credenciales de login cada vez que se tranfiera información con la plataforma, para eso se configura las llaves SSH, siendo el método más seguro.
+
+#### Llaves SSH
+
+1. Generar las llaves SSH. Si bien no es obligatorio, se recomienda proteger la llave privada con una contraseña cuando lo solicita el proceso de generación.
+~~~ 
+ssh-keygen -t rsa -b 4094 -C <tu@email.com>
+~~~
+**-t rsa** es el algoritmo elegido de cifrado (acrónimo de Rivest-Shamir-Adleman creadores del algoritmo).
+**-b 4096** son los bits que tendrá la llave. 2048 suele ser suficiente pero con 4096 se extrema la seguridad.
+**-C <Comentario de elección>**
+2. Terminar de configurar según sistema operativo.
+    a. En windows y linux:
+    - Encender el 'servidor' de llaves SSH local: *eval $(ssh-agent -s)*
+    - Añadir la llave privada SSH a este 'servidor': *ssh-add <ruta-a-la-llave-privada>*
+    b. En mac:
+    - Encender el 'Servidor' de llaves SSH local: *eval "$(ssh-agent -s)"*
+    - Para versiones de OSX superior a Mac Sierra (v10.12) se debe crear o modificar un archivo 'config' en la carpeta de usuario con el siguiente contenido (respetar las mayúsculas):
+    **Host *
+    	AddKeysToAgent yes
+    	UseKeychain yes
+    	IdentityFile
+      ruta-a-la-llave-privada**
+    - Añadir la llave privada SSH al 'servidor' de llaves SSH local (en cado de error se puede ejecutar este mismo comando pero sin el argumento -K):
+    *ssh-add -K <ruta-a-la-llave-privada>*
+
+#### Conexión a GitHub con SSH
+
