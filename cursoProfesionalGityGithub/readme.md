@@ -241,3 +241,79 @@ git push origin :refs/tags/nombre-del-tag
 
 #### Manejo de ramas en GitHub
 
+Puedes trabajar con ramas que nunca envias a github, así como pueden haber ramas importantes en github que nunca usas en el repositorio local.
+
+* Crear una rama en el repositorio local:
+  
+  ~~~ bash
+  git branch nombre-de-la-rama
+  git checkout -b nombre-de-la-rama (forma alternativa)
+  ~~~
+
+* Publicar una rama local al repositorio remoto:
+ ~~~ bash
+ git push origin nombre-de-la-rama
+ ~~~
+
+Se puede ver gráficamente el entorno y flujo de trabajo local con Git usando el comando gitk
+
+### Flujo de trabajo profesional con Pull requests
+
+En un entorno profesional normalmente se bloqueala rama master, se desarrolla en otras ramas para luego enviar código a dicha rama y tiene que pasar por un code review y luego de su aprobación se unen códigos.
+
+Para realizar pruebas enviamos el código a un 'staging server' (servidor de pruebas), una vez pasadas las pruebas tanto del código como de la aplicación, se pasan al servidor de producción mediante un pull request (github y bitbucket) o merge request (gitlab)
+#### Eliminar una rama
+
+* Eliminar una rama local:
+
+~~~ bash
+git branch -d localBranchName
+~~~
+
+* Eliminar una rama remota
+
+~~~ bash
+git push origin --delete remoteBranchName
+~~~
+
+#### Readme.md es una excelente práctica
+
+README.md es una excelente práctica en los proyectos; md significa MarkDown, es una especie de código que permite cambiar la manera en que se ve un archivo de texto.
+
+Funciona en muchas páginas, por ejemplo la edición de wikipedia; es un lenguaje intermedio que no es HTML, no es un texto plano, es una manera de crear textos formateados.
+
+Datos a tener en cuenta para escribir un buen README.md:
+
+1. **Nombre**: Especificamos cómo se llama nuestro proyecto.
+
+2. **Descripción**: es donde diremos para qué exactamente es el proyecto, que problemas resuelve y cualquier información relevante.
+
+3. **Instalación**: muestra los pasos específicos para instalar el proyecto. Por lo general se muestra un pedazo del código necesario para la instalación.
+
+4. **Cómo usar**: describe rápidamente casos de uso en los cualesse puedeusar el proyecto, además de mostrar funcionalidades.
+
+5. **Cómo contribuir**: si es un proyecto open source se describe acá la forma en la que debería crearse las contribuciones.
+
+6. **Licencia**: muestra la licencia que tiene el proyecto.
+
+### Sitio web público con GitHub Pages
+
+GitHub tiene un servicio de hosting gratis llamado GitHub Pages, se puede tener un repositiorio donde el contenido del repositorio se vaya a github y se vea online.
+
+### Múltiples entornos de trabajo
+
+#### Rebase: Reorganización en el trabajo realizado
+
+Con rebase se puede recoge todos los cambios confirmados en una rama y ponerlos sobre otra.
+
+![git rebase](./utils/rebase.jpg)
+
+1. Cambiar a la rama que queremos traer los cambios:
+
+
+#### Stash: Guardar cambios en memoria y recuperarlos después.
+#### Clean: Limpiar el proyecto de archivos no deseados.
+#### Cherry-pick: Traer commits viejos al head de un branch
+#### Amend: reconstruir commits
+#### Buscar en archivos y commits de git con Grep y log
+#### Reset y Reflog
