@@ -49,9 +49,9 @@ Al ejecutar el comando 'git init' (comando para iniciar un repositorio git) ocur
 
 #### Estado de un archivo
 
-**Commited**: si una versión concreta de un archivo está en el directorio de git, se considera confirmada.
-**Staged**: si ha sufrido cambios desde que se obtuvo del repositorio, pero ha sido añadida al área de preparación, está preparada.
-**Modified**: y si ha sufrido cambios desde que se obtuvo del repositorio, pero no se ha preparado, está modificada.
+* **Commited**: si una versión concreta de un archivo está en el directorio de git, se considera confirmada.
+* **Staged**: si ha sufrido cambios desde que se obtuvo del repositorio, pero ha sido añadida al área de preparación, está preparada.
+* **Modified**: y si ha sufrido cambios desde que se obtuvo del repositorio, pero no se ha preparado, está modificada.
 
 #### ¿Qué es un branch y cómo funciona un merge en git?
 
@@ -136,7 +136,7 @@ Al crear una nueva rama se copia el último commit en esta nueva rama. Todos los
 
 - *git branch*: lista las ramas creadas.
 
-##### ¿Como resolver conflictos en gi?
+##### ¿Como resolver conflictos en git?
 
 Al trabajar en dos o más ramas sobre las mismas líneas de código, ocurririan conflictos a la hora de hacer merge. Git automáticamente nos especificará en nuestro código dónde se encuentran los conflictos.
 Para resolver este problema debemos especificar la rama de donde queremos obtener el cambio, quedarnos con esas modificaciones y realizar un *commit* para completar el *merge*.
