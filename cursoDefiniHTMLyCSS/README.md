@@ -133,3 +133,34 @@ Los IDs están por encima de las clases. Los IDs son específicos, si se usa uno
 Un estilo de etiqueta es el último valor que el navegador tiene en cuenta antes de tomar los estilos por defecto de esa etiqueta. Los estilos de etiqueta son los que menos peso tienen.
 
 Orden correcto de declaraciones en CSS: Important-Inline-id-class-etiqueta
+
+Al utilizar Display Flex, se puede alinear vertical los elementos hijos con; Flex-direction: column;
+
+
+Flex-direction: Te permite elegir la alineación de los elementos hijos sea en vertical (column) u horizontal (row), esta alineación viene por defecto.
+
+Justify-content: Esta propiedad nos permite alinear el contenido de forma horizontal
+Valores:
+
+    Flex-start: Alinear items del flex desde el comienzo.
+    Flex-end: Alinear items desde el final.
+    Center: Alinear items en el centro del contenedor.
+    Space-between: Distribuir items uniformemente, el primer items al inicio, el último al final.
+    Space-around: Distribuir items uniformemente, estos tienen el mismo espacio a su alrededor.
+    Space-evenly: Distribuye uniformemente el espacio entre los items y su alrededor.
+
+Flex-wrap: Permite que un elemento cuyo tamaño sea mayor al de la página haga un salto de línea sin salirse del contenedor, pues este se agranda.
+
+Diferencia entre display block e Inline
+
+Block: Estos toman el 100% del width, por lo que un elemento no puede posicionarse a un lado de el.
+Se le puede poner el width deseado, height deseado, añadir margin, padding sin problema. Pero recordando que ocupara este elemento todo el largo de una Fila por asi decirlo.
+
+Inline: Estos elementos solo ocuparan el ancho dependiento de su contenido. Por lo tanto estos elementos si permiten que si un elemento cabe a lado suyo, se posicione este ahi.
+Las *desventajas es que no se les puede modificar el width, height, ni colocar margin u padding tanto top, como bottom.
+
+inline-block: Este tiene la combinación de los 2 anteriores. Haciéndolo un mejor candidato para usarlo.
+Permite modificar su width, height, añadirle margin, padding sin problemas y lo mejor es que mientras que haya espacio a un lado suyo, este permitirá posicionar mas elementos ahi.
+
+automplete=“on” 
+
