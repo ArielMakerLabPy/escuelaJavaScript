@@ -29,6 +29,12 @@
 
 ### Optimización de imágenes
 
+#### Páginas a utilizar para optimizar imágenes
+
+Comprime el tamaño de una imagen [Tiny PNG](https://tinypng.com/)
+
+Elimina los metadatos de una imagen [Verefix](https://www.verexif.com/)
+
 ### Etiqueta img
 
 ### Etiqueta figure
