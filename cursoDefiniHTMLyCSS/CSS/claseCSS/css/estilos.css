@@ -1,0 +1,20 @@
+html{
+    font-size: 62.5%;
+}
+
+h1{
+    color: blue;
+    font-size: 40px;
+}
+
+/* class */
+
+.titulo {
+    color: red;
+}
+
+/* id*/
+#navegacion{
+    color: violet;
+    
+}
