@@ -7,39 +7,33 @@
     <meta name="robots" content="index,follow" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/estilos.css">
-    <title>Clase Herencia</title>
+    <title>Layout</title>
 </head>
 
 <body>
     <header class="page-header">
-        <h1 id="page-title" class="title">Empresa</h1>
-        <nav>
-            <ul class="main-nav" id="nav">
-                <li class="main-nav__item"><a href="#">Inicio</a></li>
-                <li class="main-nav__item"><a href="#">Nosotros</a></li>
-                <li class="main-nav__item"><a href="#">Contacto</a></li>
+        <h1 class="title">LOGO</h1>
+        <nav class="navegacion">
+            <ul class="main-nav">
+                <li class="main-nav__item"><a href="#">Home</a></li>
+                <li class="main-nav__item"><a href="#">Cursos</a></li>
+                <li class="main-nav__item"><a href="#">Teachers</a></li>
+                <li class="main-nav__item"><a href="#">Blog</a></li>
             </ul>
         </nav>
     </header>
-    <main>
-        <div class="block-element">Esta es una etiqueta div</div>
-        <p class="block-element">Esta es una etiqueta de párrafo</p>
-        <div class="block-element">
-            <p class="parrafo">Soy texto</p>
-            <p class="parrafo">Soy texto</p>
-            <p class="parrafo">Soy texto</p>
-        </div>
-        <span>Soy una etiqueta span</span>
-        <span>Soy una etiqueta span</span>
+    <main class="cuerpo-principal">
+       <aside class="cuerpo-principal__columna">
+           <div></div>
+           <div></div>
+           <div></div>
+           <div></div>
+       </aside>
+       <section class="cuerpo-principal__contenido">
 
-        <ul class="nav-lista">
-            <li>Home</li>
-            <li>Cursos</li>
-            <li>Instructores</li>
-            <li>Blog</li>
-        </ul>
+       </section>
     </main>
-    <footer>
+    <footer class="pie-pagina">
     </footer>
 </body>
 
