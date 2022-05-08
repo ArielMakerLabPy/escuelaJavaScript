@@ -95,6 +95,8 @@ Elimina los metadatos de una imagen [Verefix](https://www.verexif.com/)
 
 ### Display Flex
 
+Display Flex o Flexbox
+
 ### Flexbox layouts
 
 ### Variables
