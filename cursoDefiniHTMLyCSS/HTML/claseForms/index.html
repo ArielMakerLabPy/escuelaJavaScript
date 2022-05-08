@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="description" content="Aprendiendo sobre HTML y CSS" />
+        <meta name="robots" content="index,follow" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/estilos.css">
+        <title>HTML y CSS</title>
+    </head>
+
+    <body>
+        <header>
+            <h1>Soy un título h1</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Nosotros</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section>
+                <form action="">
+                    <label for="name">
+                        <span>¿Cual es tu nombre?</span>
+                        <input type="text" id="name" placeholder="Tu nombre"/>
+                    </label>
+                    <label for="inicio-platzi">
+                        <span>¿Que día empezaste en Platzi?</span>
+                        <input type="date" id="inicio-platzi" />
+                    </label>
+                    <label for="horario">
+                        <span>¿En que horario estudias?</span>
+                        <input type="time" id="horario" />
+                    </label>
+                </form>
+            </section>
+            <section>
+                <form action="">
+                   <label for="hora">
+                       <span>Hora</span>
+                       <input type="time" id="hora" name="hora">
+                   </label>
+                   <label for="dia">
+                    <span>Dia</span>
+                    <input type="date" id="dia" name="dia">
+                </label>
+                   <label for="semana">
+                    <span>Semana</span>
+                    <input type="week" id="semana" name="semana">
+                </label>
+                <label for="mes">
+                    <span>Mes</span>
+                    <input type="month" id="mes" name="mes">
+                </label>
+                <input type="submit">
+                </form>
+            </section>
+            <section>
+                <form action="">
+                    <label for="calendario">
+                        <span>calendario</span>
+                        <input type="datetime-local" id="calendario" name="calendario">
+                    </label>
+                    <input type="submit">
+                </form>
+            </section>
+            <section>
+                <form action="">
+                    <label for="nombre">
+                        <span>¿Cual es tu nombre?</span>
+                        <input type="text" id="nombre" name="nombre" autocomplete="name" required>
+                    </label>
+                    <label for="correo">
+                        <span>¿Cual es tu correo?</span>
+                        <input type="email" id="correo" name="correo" autocomplete="email" required>
+                    </label>
+                    <label for="pais">
+                        <span>¿Cual es tu pais?</span>
+                        <input type="text" id="pais" name="pais" autocomplete="country" required>
+                    </label>
+                    <label for="cp">
+                        <span>¿Cual es tu código postal?</span>
+                        <input type="text" id="cp" name="cp" autocomplete="postal-code" required>
+                    </label>
+                    <input type="submit">
+                </form>
+            </section>
+            <section>
+                <select name="Cursos" id="">
+                    <option value="Javascript">Javascript</option>
+                    <option value="PHP">PHP</option>
+                    <option value="HTML">HTML</option>
+                    <option value="CSS">CSS</option>
+                </select>
+            </section>
+            <section>
+                <input list="cursos">
+                <datalist id="cursos">
+                    <option value="Javascript">Javascript</option>
+                    <option value="PHP">PHP</option>
+                    <option value="HTML">HTML</option>
+                    <option value="CSS">CSS</option>
+                </datalist>
+            </section>
+            <section>
+                <input type="submit" value="Nombre">
+
+                <button type="submit">Que color te gusta</button>
+            </section>
+        </main>
+        <footer>
+        </footer>
+    </body>
+</html>

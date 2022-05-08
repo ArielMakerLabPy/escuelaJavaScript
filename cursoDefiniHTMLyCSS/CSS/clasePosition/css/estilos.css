@@ -1,0 +1,94 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+
+h1 {
+    font-family: serif;
+}
+
+#page-title {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.title {
+    font-size: 1.8rem;
+    font-family: monospace;
+}
+
+.main-nav {
+    margin-top: 10px;
+    list-style: none;
+    padding-left: 0;
+    background-color: #13a4a4;
+}
+
+.main-nav .main-nav__item {
+    display: inline-block;
+}
+
+.main-nav__item a {
+    color: white;
+    padding: 5px;
+    border-radius: 2px;
+    text-decoration: none;
+}
+
+.main-nav__item a:hover {
+    color: blue;
+}
+
+.main-nav__item a:active {
+    color: red;
+}
+
+.main-nav__item a::after {
+    content: ' | ';
+}
+
+.parent {
+    border: 2px black dotted;
+    display: inline-block;
+}
+
+.box {
+    display: inline-block;
+    background-color: red;
+    width: 100px;
+    height: 100px;
+}
+
+#two {
+    background-color: greenyellow;
+}
+
+.peque {
+    background-color: red;
+    border: 2px black;
+    border-radius: 10px;
+    width: 200px;
+    height: 50px;
+    position: relative;
+    left: 50px;
+    top: 25px;
+    line-height: 50px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.grande {
+    background-color: grey;
+    width: 300px;
+    height: 200px;
+    border: 2px black;
+    border-radius: 15px;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 85px;
+}
