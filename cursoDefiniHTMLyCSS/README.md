@@ -99,6 +99,9 @@ Display Flex o Flexbox
 
 ### Flexbox layouts
 
+Se puede usar order en cada caja hijo para ir ordenando. Los que no tengan order se colocan siempre hacia la izquierda en el orden colocado en HTML y los que tengan order empiezan desde la izquierda y van hacia la derecha en el orden especificado en order.
+Con flex-grow se rellena el espacio para completar la caja padre, se coloca dentro de la caja hijo que se quiera aumentar de tamaño
+
 ### Variables
 
 ### Web fonts
