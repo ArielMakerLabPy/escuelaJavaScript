@@ -70,3 +70,45 @@ console.log(calculator.add(10))
 console.log(calculator.subtract(-10))
 console.log(calculator.clear())
 
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+const numbers = [1, 2, 3, 4, 5];
+const doubledNumbers = numbers.map(function(number) {
+  return number * 2;
+});
+console.log(doubledNumbers); // Output: [2, 4, 6, 8, 10]
+console.log(numbers) 
+
+
+const numbers = [1, 2, 3, 4, 5];
+const evenNumbers = numbers.filter(function(number) {
+  return number % 2 === 0;
+});
+console.log(evenNumbers); 
+
+
+//Definir la función myMap que recibe un array y una función como parámetros
+
+function myMap (array, func){
+
+    //Crear un nuevo array vacío para almacenar los resultados
+    let result = [];
+
+    //recorrer cada elemento del array original con un bucle for
+    for (let i = 0; i < array.length; i++){
+
+        //Aplicar la función al elemento actual y guardar el resultado en una variable
+        let value  = func(array[i]);
+
+        //Añadir el resultado al nuevo array
+        result.push(value);
+    }
+
+    //devolver el nuevo array
+    return result;
+}
+
+let input1 = [1, 2, 3, 4];
+let output1 = myMap(input1, (num) => num*2);
+console.log(output1);
