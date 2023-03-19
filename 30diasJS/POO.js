@@ -167,6 +167,21 @@ class Student {
     }
 }
 
+class Course{
+    constructor({
+        name,
+        classes = [],
+    }){
+        this.name = name;
+        this.classes = classes;
+    }
+}
+
+const cursoProgBasic = new Course({
+    name: 'Curso Gratis de Programación Básica',
+    
+})
+
 class LearningPath {
   constructor(name, courses) {
     this.name = name;
@@ -229,3 +244,5 @@ const miguelito2 = new Student({
 
 console.log(juan2);
 console.log(miguelito2);
+
+
